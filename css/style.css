@@ -2,7 +2,7 @@ body {
     position: relative;
     margin: 0;
     padding: 0;
-    padding-bottom: 10px;
+    padding-bottom: 75px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: white;
     font-size: 20px;
@@ -44,9 +44,7 @@ header {
     display: flex;
     flex-direction: row;
     position: relative;
-    z-index: 99;
-    align-items: flex-start;
-    justify-content: flex-start;
+    z-index: 99; /* Stay on top */
 }
 header a { height: 100%; }
 .logo {
@@ -150,39 +148,124 @@ header a { height: 100%; }
     
 }
 #mission {
+    background-image: url(../images/logo.png);
+    background-size: contain;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+#mission-info {
     display: flex;
     flex-direction: row;
-    gap: 2vw;
+    gap: 30px;
     padding: 2vw;
+    background-color: rgba(255,255,255,0.92);
 }
-#mission div {
+#mission-info div {
     min-width: 0;
     flex: 1;
 }
-#mission p {
+#mission-info p {
     text-align: justify;
     word-wrap: break-word;
 }
-#mission h1 {
+#mission-info h1 {
     text-align: center;
     font-weight: bold;
 }
-#mission li {
+#mission-info li {
     list-style: square;
     word-wrap: break-word;
     margin-left: 1.5vw;
 }
 
+#library {
+    background-image: url(../images/library.jpg);
+}
+#event {
+    background-image: url(../images/event.jpg);
+}
+#admission {
+    background-image: url(../images/admission.jpg);
+}
 #library, #event, #admission {
     text-align: center;
+    color: whitesmoke;
+    /* margin-bottom: 20px; */
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+#event {
+    color: black;
+}
+#library div, #admission div {
+    padding: 5vw 30vw;
+    background-color: rgba(28, 48, 92, 0.8);
+}
+#event div {
+    padding: 5vw 30vw;
+    background-color: rgba(245, 245, 245, 0.8);
 }
 
+#contact {
+    text-align: center;
+    background-image: url(../images/logo.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+#contact div {
+    padding: 5vw 30vw;
+    background-color: rgba(255,255,255,0.93);
+}
+form {
+    padding: 25px 5vw;
+    border: solid 1px black;
+    border-radius: 2vw;
+    background-color: rgba(28, 48, 92, 1);
+}
+form input {
+    width: 100%;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.93);
+    padding: 5px;
+}
+form textarea {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.93);
+    padding: 10px;
+}
+form label {
+    color: whitesmoke;
+}
+#form-user {
+    width: 100%;
+    /* display: flex;
+    flex-direction: row; */
+}
 footer {
     position: absolute;
     bottom: 0;
-    background-color: #1C305C;
+    padding: .5vw;
+    background-color: #1c305c;
     width: 100%;
     color: whitesmoke;
+    font-size: 14px;
+    display: flex;
+    flex-wrap: wrap;
+}
+footer div {
+    flex: 1;
+    height: 100%;
+}
+footer div:last-child {
+    flex: 1 1 90%;
+}
+footer p {
+    text-align: center;
+    word-wrap: normal;
 }
 /* section {
     border: solid 1px black;
