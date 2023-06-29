@@ -2,12 +2,152 @@
 <html>
 
 <head>
-    <title>PCSHS Web</title>
+    <title>HOME</title>
     <link rel="icon" type="icon" href="images/logo_icon.ico">
 </head>
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/scrollbar.css">
+<style>
+    .carousel, .carousel-inner, .carousel-item {
+    width: 100%;
+    height: 100vh;
+    }
+    .carousel-inner {
+        opacity: 0.9;
+    }
+    .carousel-item img {
+        object-fit: cover;
+        object-position: center;
+        height: 100%;
+        width: 100%;
+    }
+    .carousel-container {
+        background-color: rgba(0, 0, 0, 0.95);
+        position: relative;
+    }
+    #apply { /* BUTTON */
+        position: absolute;
+        bottom: 60px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 5
+    }
+    .carousel-container p {
+        position: absolute;
+        bottom: 20px;
+        color: whitesmoke;
+        text-align: center;
+        width: 100%;
+        z-index: 5;
+    }
+    .carousel-container H1 {
+        position: absolute;
+        top: 20px;
+        color: whitesmoke;
+        text-align: center;
+        width: 100%;
+        z-index: 5;
+        font-size: max(30px, 3vw);
+        
+    }
+    #mission {
+        background-image: url(images/logo.png);
+        background-size: contain;
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+    }
+    #mission-info {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 30px;
+        padding: 2vw;
+        background-color: rgba(255,255,255,0.92);
+    }
+    #mission-info div {
+        min-width: 0;
+        flex: 1 1 30%;
+        text-align: center;
+    }
+    #mission-info p {
+        text-align: justify;
+        word-wrap: break-word;
+    }
+    #mission-info h1{
+        text-align: center;
+        font-weight: bold;
+    }
+    #mission-info li {
+        list-style: square;
+        word-wrap: break-word;
+        margin-left: 1.5vw;
+        text-align: justify;
+    }
+
+    #library {
+        background-image: url(images/library.jpg);
+    }
+    #event {
+        background-image: url(images/event.jpg);
+    }
+    #admission {
+        background-image: url(images/admission.jpg);
+    }
+    #library, #event, #admission {
+        text-align: center;
+        color: whitesmoke;
+        /* margin-bottom: 20px; */
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    #event {
+        color: black;
+    }
+    #library div, #admission div {
+        padding: 5vw 30vw;
+        background-color: rgba(28, 48, 92, 0.8);
+    }
+    #event div {
+        padding: 5vw 30vw;
+        background-color: rgba(245, 245, 245, 0.8);
+    }
+
+    #contact {
+        text-align: center;
+        background-image: url(images/logo.png);
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+    }
+    #contact div {
+        padding: 5vw 30vw;
+        background-color: rgba(255,255,255,0.93);
+    }
+    form {
+        padding: 25px 5vw;
+        border: solid 1px black;
+        border-radius: 2vw;
+        background-color: rgba(28, 48, 92, 1);
+    }
+    form input {
+        width: 100%;
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.93);
+        padding: 5px;
+    }
+    form textarea {
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.93);
+        padding: 10px;
+    }
+    form label {
+        color: whitesmoke;
+    }
+</style>
 <body>
     
     <!-- Bootstrap Carousel -->
@@ -45,18 +185,6 @@
     </div>
     <nav>
         <header>
-            <img class="menu" onclick="showItems()" src="images/menubar.png">
-            </div>
-                <div class="menuitems" id="menuitems" style="left: -192px;">
-                    <ol>
-                        <li><a href="#home">HOME</a></li>
-                        <li><a href="#mission">ABOUT US</a></li>
-                        <li><a href="#library">E-LIBRARY</a></li>
-                        <li><a href="#event">EVENTS</a></li>
-                        <li><a href="#admission">ADMISSION</a></li>
-                        <li><a href="#contact">CONTACT US</a></li>
-                    </ol>
-                </div>
             <a href=""><img class="logo" src="images/logo.png"></a>
             <div class="school-info">
                 <h1>PASIG CITY SCIENCE HIGH SCHOOL</h1>
@@ -72,16 +200,19 @@
     <main id="home">
         <section id="mission">
             <div id="mission-info">
+                <div style="flex: 1 1 90%">
+                    <h1>ABOUT US</h1>
+                </div>
                 <div>
-                    <h1>MISSION</h1>
+                    <strong>MISSION</strong>
                     <p>Pasig City Science High School's (PCSHS') mission is to fully develop well-rounded, science and technology-oriented students, nurturing and gender-sensitive persons, and future leaders with a vision for excellence.</p>
                 </div>
                 <div>
-                    <h1>VISION</h1>
+                    <strong>VISION</strong>
                     <p>PCSHS is envisioned to be a world class institution that is globally and locally competitive and responsive to the ever-changing needs of the times, especially in the fields of Science and Technology</p>
                 </div>
                 <div>
-                    <h1>OBJECTIVES</h1>
+                    <strong>OBJECTIVES</strong>
                     <p>As a premier public science high school, its primary objectives are:</p>
                     <ol>
                         <li>to offer scholarship grants to deserving gifted students;</li>
@@ -91,6 +222,9 @@
                         <li>to harness to the fullest the artistic, athletic, managerial and leadership skills of the students; and</li>
                         <li>to inculcate among the students the values and virtues in life necessary in their interrelationships with selves, others, country, and God.</li>
                     </ol>
+                </div>
+                <div style="flex: 1 1 90%">
+                    <a href="about.html"><button type="button" class="btn btn-primary">Learn More</button></a>
                 </div>
             </div>
         </section>
@@ -104,7 +238,7 @@
                     PCSHS is committed to honing its students' excellence. From academics to values, the institution provides learning materials for its students to access.
                 </p>
                 <br><br>
-                <a><button class="btn btn-primary">Access Now</button></a>
+                <a href="e-library.html"><button class="btn btn-primary">Access Now</button></a>
             </div>
         </section>
         <section id="event">
@@ -117,7 +251,7 @@
                     PCSHS isn't just about academics— it's also a haven for fun activities and events that foster communal growth! Throughout the year, PCSHS holds several memorable events, from the Battle of the Bands to Foundation Week.
                 </p>
                 <br><br>
-                <a><button class="btn btn-primary">Learn More</button></a>
+                <a href="events.html"><button class="btn btn-primary">Learn More</button></a>
             </div>
         </section>
         <section id="admission">
@@ -130,7 +264,7 @@
                     PCSHS welcomes interested students across the city. Just make sure your credentials are within our qualifications, and you're all set to apply! Learn more about our admission process by clicking the button below.
                 </p>
                 <br><br>
-                <a><button class="btn btn-primary">Learn More</button></a>
+                <a href="admission.html"><button class="btn btn-primary">Learn More</button></a>
             </div>
         </section>
         <section id="contact">
@@ -174,14 +308,4 @@
     </footer>
 </body>
 <script src="js/bootstrap.bundle.min.js"></script>
-<script>
-    menuitems = document.getElementById("menuitems");
-    var menuhide = true;
-    function showItems() {
-        menuhide = !menuhide;
-        if (menuhide) menuitems.style = "left: -192px;";
-        else menuitems.style = "left: 0;";
-    }
-</script>
-
 </html>
