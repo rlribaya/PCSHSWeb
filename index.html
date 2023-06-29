@@ -12,7 +12,7 @@
     
     <!-- Bootstrap Carousel -->
     <div class="carousel-container">
-        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img src="images/carousel-1.jpg" alt="...">
@@ -47,7 +47,7 @@
         <header>
             <img class="menu" onclick="showItems()" src="images/menubar.png">
             </div>
-                <div class="menuitems" id="menuitems" style="left: -10vw;">
+                <div class="menuitems" id="menuitems" style="left: -192px;">
                     <ol>
                         <li><a href="#home">HOME</a></li>
                         <li><a href="#mission">ABOUT US</a></li>
@@ -107,7 +107,7 @@
     var menuhide = true;
     function showItems() {
         menuhide = !menuhide;
-        if (menuhide) menuitems.style = "left: -10vw;";
+        if (menuhide) menuitems.style = "left: -192px;";
         else menuitems.style = "left: 0;";
     }
 </script>
