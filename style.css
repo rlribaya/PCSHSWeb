@@ -1,0 +1,119 @@
+body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    padding-top: 3vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: white;
+}
+h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 1vw;
+}
+p {
+    margin: 0;
+    padding: 0;
+    font-size: 1vw;
+}
+ol{
+    margin: 0;
+    padding: 0;
+}
+li {
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+header {
+    background-color: #1C305C;
+    height: 3vw;
+    width: 100%;
+    min-height: 40px !important;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+header a { height: 100%; }
+.logo {
+    object-fit: cover;
+    aspect-ratio: 1/1;
+    height: 100%;
+    margin-left: 0.5vw;
+}
+.school-info{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100%;
+    margin-left: 0.5vw;
+}.school-info h1 {
+    color: whitesmoke;
+    font-size: max(1.25vw, 16.6px);
+    font-weight: bold;
+} 
+.school-info p{
+    color: whitesmoke;
+    font-size: max(0.75vw, 10px);
+    font-style: italic;
+} 
+
+.menu {
+    aspect-ratio: 1/1;
+    height: 90%;
+    background-image: url(images/menubar.png);
+    background-size: cover;
+    
+}
+.menuitems {
+    position: absolute;
+    top: 100%;
+    width: 10vw;
+    background-color: rgb(245, 222, 179);
+    transition: all ease-out 0.5s;
+}
+.menuitems ol {
+    text-align: center;
+    border: solid 1px rgba(0,0,0,0.1);
+}
+.menuitems ol li {
+    font-size: 1vw;
+    list-style-type: none;
+}
+.menuitems ol li a:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.menuitems ol li a {
+    display: inline-block;
+    padding: 1vw;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.25s ease-in-out;
+}
+li + li {
+    border-top: solid 1px black;
+}
+.carousel-container {
+    padding-left: 15vw;
+    padding-right: 15vw;
+    background-color: rgba(0, 0, 0, 0.95);
+}
+main {
+    height: 1000px;
+}
+footer {
+    position: absolute;
+    bottom: 0;
+    background-color: #1C305C;
+    width: 100%;
+    color: whitesmoke;
+}

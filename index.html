@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PCSHS Web</title>
+    </head>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <body>
+        <header>
+            <div class="menu" onclick="showItems()"></div>
+            <div class="menuitems" id="menuitems" style="left: -10vw;">
+                <ol>
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="">ABOUT US</a></li>
+                    <li><a href="">EVENTS</a></li>
+                    <li><a href="">E-LIBRARY</a></li>
+                    <li><a href="">ADMISSION</a></li>
+                </ol>
+            </div>
+            <a href=""><img class="logo" src="images/logo.png"></a>
+            <div class="school-info">
+                <h1>PASIG CITY SCIENCE HIGH SCHOOL</h1>
+                <p>RAVE Park, Maybunga, Pasig City</p>
+            </div>
+        </header>
+        <!-- Bootstrap Carousel -->
+        <div class="carousel-container">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="images/carousel-1.jpg" class="img-fluid" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images/carousel-2.jpg" class="img-fluid" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images/sample.jpg" class="img-fluid" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        </div>
+        <main id="home">
+            HOME
+        </main>
+        <footer>
+            CONTACTS
+        </footer>
+    </body>
+    <script src="bootstrap.bundle.min.js"></script>
+    <script>
+        menuitems = document.getElementById("menuitems");
+        var menuhide = true;
+        function showItems() {
+            menuhide = !menuhide;
+            if (menuhide) menuitems.style = "left: -10vw;";
+            else menuitems.style = "left: 0;";
+        }
+    </script>
+</html>
