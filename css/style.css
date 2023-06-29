@@ -6,6 +6,7 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: white;
     font-size: 20px;
+    min-height: 100vh;
 }
 h1 {
     margin: 0;
@@ -38,15 +39,18 @@ nav {
 }
 header {
     background-color: #1C305C;
-    height: 75px;
     width: 100%;
     padding: 5px;
     display: flex;
     flex-direction: row;
+    flex-wrap:wrap;
     position: relative;
+    align-items: center;
+    justify-content: space-evenly;
     z-index: 99; /* Stay on top */
+    row-gap: 1vw;
 }
-header a { height: 100%; }
+header a { height: 75px; }
 .logo {
     object-fit: cover;
     aspect-ratio: 1/1;
@@ -71,6 +75,27 @@ header a { height: 100%; }
     font-size: 16px;
     font-style: italic;
 }
+.nav-buttons {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 5vw;
+    color: whitesmoke;
+    height: 50px;
+}
+.nav-buttons a {
+    flex: 1;
+}
+.nav-buttons div {
+    display: flex;
+    vertical-align: middle;
+    height: 100%;
+    flex: 1;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
 footer {
     position: absolute;
     bottom: 0;
@@ -93,6 +118,3 @@ footer p {
     text-align: center;
     word-wrap: normal;
 }
-/* section {
-    border: solid 1px black;
-} */
